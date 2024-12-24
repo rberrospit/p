@@ -1,0 +1,1 @@
+([ADSISearcher]'(&(objectCategory=usuario)(miembroDe=CN=SQLGroup,OU=Usuarios,OU=Lab,DC=flame,DC=delos,DC=lab))').FindAll() | foreach {[ADSI]$_.path} | Seleccionar -Propiedad sAMAccountName,miembroDe | Formato-Lista
